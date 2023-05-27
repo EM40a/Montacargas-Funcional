@@ -1,0 +1,7 @@
+﻿Nombre,Cantidad,Componente
+"U1",1," Arduino Uno R3"
+"D1",1,"Rojo LED"
+"D2",1,"Verde LED"
+"S1, S2, S3",3," Pulsador"
+"Digit1",1,"Cátodo Visualizador de 7 segmentos"
+"R1, R2, R3, R4, R5, R6, R7, R8, R9",9,"220 Ω Resistencia"
