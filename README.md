@@ -22,8 +22,8 @@ El objetivo es simular el funcionamiento de un montacargas real dentro de un ent
 + **Display de 7 segmentos**: muestra en tiempo real en qué piso se encuentra el montacargas.
 + Las resistencias necesarias para cada componente.
 
-🔗 [Modelo Esquematico](assets\Modelo_Esquematico.pdf)  
-📑 [Lista de componentes](assets\Lista_De_Componentes.csv)
+🔗 [Modelo Esquematico](assets/Modelo_Esquematico.pdf)  
+📑 [Lista de componentes](assets/Lista_De_Componentes.csv)
 
 
 ## ⚙ Funcionamiento del montacargas
@@ -114,17 +114,18 @@ Si los botones **BOTON_SUBIR** o **BOTON_BAJAR** son presionados (LOW) se contro
 void controlarMontacargas(String modo)
 {
   if (estaEnMovimiento) {
-	encenderluzDeMovimiento(estaEnMovimiento);
-	delay(3000);
+    encenderluzDeMovimiento(estaEnMovimiento);
+    delay(3000);
 
-	if (modo == "Subir") {
-  	[](){(pisoActual < 9) ? pisoActual++ : estaEnMovimiento == false;}();
-	} else if (modo == "Bajar") {
-  	[](){(pisoActual > 0) ? pisoActual-- : estaEnMovimiento == false;}();
-	}
+    if (modo == "Subir") {
+      [](){(pisoActual < 9) ? pisoActual++ : estaEnMovimiento == false;}();
+    } 
+    else if (modo == "Bajar") {
+      [](){(pisoActual > 0) ? pisoActual-- : estaEnMovimiento == false;}();
+    }
 
-	informarEstado(pisoActual);
-	encenderluzDeMovimiento(false);
+    informarEstado(pisoActual);
+    encenderluzDeMovimiento(false);
   }
 }
 ```
